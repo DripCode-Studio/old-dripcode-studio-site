@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 import { LanguageProvider } from "./contexts/LanguageContext.jsx";
 import App from "./App.jsx";
@@ -9,6 +10,7 @@ createRoot(document.getElementById("root")).render(
     <ThemeProvider>
       <LanguageProvider>
         <App />
+        <Analytics />
       </LanguageProvider>
     </ThemeProvider>
   </StrictMode>
